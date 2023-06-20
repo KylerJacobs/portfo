@@ -10,6 +10,10 @@ def my_home():
 def html_page(page_name):
 	return render_template(page_name)
 
+@app.route('/download_resume')
+def download_resume():
+    return send_from_directory('./static/assets', 'Resume_6_20_23.pdf', as_attachment=True)
+
 def write_to_file(data):
 	with open('database.txt', mode='a') as database:
 		email = data['email']
