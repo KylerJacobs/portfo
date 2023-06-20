@@ -59,11 +59,6 @@
           <div class="hero-full-wrapper">
             <div class="text-content">
               <h1>Hello,<br>
-                <span id="typed-strings">
-                  <span>I'm Kyler Jacobs</span>
-                  <span>I'm a Python Developer</span>
-                  <span>Cultivating success through Python in the digital landscape</span>
-                </span>
                 <span id="typed"></span>
               </h1>
             </div>
@@ -73,14 +68,23 @@
     </div>
   </div>
 
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {
-     type();
-     movingBackgroundImage();
+    var typed = new Typed('#typed', {
+      strings: [
+        "I'm Kyler Jacobs",
+        "I'm a Python Developer",
+        "Cultivating success through Python in the digital landscape"
+      ],
+      typeSpeed: 35, // Adjust this value to set the typing speed (lower = faster)
+      loop: true
+    });
+
+    movingBackgroundImage();
   });
 </script>
 
 <script type="text/javascript" src="./static/main.70a66962.js"></script>
 </body>
-
 </html>
